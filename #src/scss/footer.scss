@@ -1,0 +1,229 @@
+.mailing {
+	position: relative;
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	&__body {
+		display: flex;
+		color: #fff;
+		padding: 85px 85px;
+		@include lg-block {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		@include sm-block {
+			padding: 20px 15px 50px;
+		}
+	}
+	// .mailing__content
+	&__content {
+		position: relative;
+		@include lg-block {
+			max-width: 550px;
+			text-align: center;
+		}
+		// .mailing__content_title
+		&_title {
+			font-size: 27px;
+			line-height: 35px;
+			padding-bottom: 15px;
+			@include lg-block {
+				padding-left: 0;
+			}
+			@include xs-block {
+				font-size: 20px;
+			}
+		}
+		// .mailing__content_subtitle
+		&_subtitle {
+			font-size: 17px;
+			@include lg-block {
+				padding-bottom: 15px;
+			}
+			@include xs-block {
+				font-size: 15px;
+			}
+		}
+	}
+	// .mailing__form
+	&__form {
+		position: relative;
+		padding-top: 10px;
+		margin-left: 55px;
+		@include lg-block {
+			margin: 0;
+			padding-bottom: 25px;
+		}
+	}
+}
+.form-content {
+	position: relative;
+
+	&__input {
+		width: 445px;
+		height: 55px;
+		@include xs-block {
+			width: 300px;
+			height: 50px;
+		}
+	}
+	input {
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		border: none;
+		color: #b8b8b8;
+		font-size: 15px;
+		padding-left: 20px;
+		box-sizing: border-box;
+		overflow: hidden;
+		@include xs-block {
+			font-size: 12px;
+		}
+	}
+	button {
+		position: absolute;
+		top: 27px;
+		right: 15px;
+		border: 0;
+		background: url('../img/icon/st-f.png') 0 0 no-repeat;
+		width: 22px;
+		height: 22px;
+		cursor: pointer;
+	}
+	// .form-checkbox
+	.form-checkbox {
+		padding-top: 15px;
+		display: flex;
+		justify-content: center;
+		@include lg-block {
+			margin: 0 0 20px;
+		}
+		input[type=checkbox] {
+			display: none;
+		}
+		input {
+			outline: 0;
+			border: none;
+			cursor: pointer;
+		}
+		.label__checkbox {
+			display: inline-block;
+			cursor: pointer;
+			position: relative;
+			font-size: 14px;
+			padding-left: 35px;
+			font-weight: 300;
+			line-height: 18px;
+			color: #fff;
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				left: 0;
+				background-color: #fff;
+			}
+			@include xs-block {
+				font-size: 12px;
+			}
+		}
+		input[type=checkbox]:checked + .label__checkbox:before {
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: #fff url('../img/icon/checked.png') center no-repeat;
+		}
+	}
+}
+.footer-info {
+	display: flex;
+	justify-content: space-between;
+	padding: 35px 0;
+	border-bottom: 1px solid #d8d6d6;
+	@include lg-block {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+.info {
+	// .info__item
+	&__item {
+		&_footer {
+			@include lg-block {
+				display: block !important;
+				margin: 0 20px 20px;
+			}
+			@include xs-block {
+				margin: 0 10px 20px;
+			}
+		}
+	}
+	// .info__address
+	&__address {
+		&_footer {
+			margin: 0;
+			@include md-block {
+				margin: 0;
+			}
+		}
+	}
+	// .info__icon-email
+	&__icon-email {
+		background: url('../img/icon/email.png') top left no-repeat;
+	}
+
+	// .info__email
+	&__email {
+		padding-left: 30px;
+	}
+
+	// .info__icon-schelude
+	&__icon-schelude {
+		background: url('../img/icon/time.png') top left no-repeat;
+		display: block;
+	}
+
+	// .info__schelude
+	&__schelude {
+		padding-left: 30px;
+		color: #000;
+		&_off {
+			font-size: 14px;
+			padding-left: 30px;
+		}
+	}
+
+	// .info__social
+	&__social {
+		display: inline-flex;
+		justify-content: center;
+		.social_item {
+			padding-right: 10px;
+			&:last-child {
+				padding: 0;
+			}
+		}
+	}
+}
+.politica {
+	display: flex;
+	justify-content: center;
+	padding: 15px 0;
+	@include sm-block {
+		flex-wrap: wrap;
+	}
+	span {
+		color: #6e6e6e;
+		font-size: 12px;
+		padding: 0 25px;
+		&:last-child {
+			padding: 0;
+		}
+	}
+}

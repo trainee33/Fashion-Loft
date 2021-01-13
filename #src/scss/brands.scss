@@ -1,0 +1,36 @@
+.filter__title_brands {
+	font-size: 27px;
+	line-height: 41px;
+}
+.brand-content {
+	display: flex;
+	background-color: #f7f7f7;
+	margin: 10px 0 20px;
+	@include xs-block {
+		flex-wrap: wrap;
+		text-align: center;
+	}
+	// .brand-content__text
+	&__text {
+		padding: 25px 30px;
+		@include xs-block {
+			order: 1;
+			padding: 25px 10px;
+		}
+		p {
+			flex: 0 1 auto;
+			font-size: 13px;
+			line-height: 25px;
+		}
+	}
+	// .brand-content__logo
+	&__logo {
+		flex: 1 0 200px;
+		width: 100%;
+		padding: 25px 0;
+		@include xs-block {
+			order: 0;
+			padding-bottom: 0;
+		}
+	}
+}

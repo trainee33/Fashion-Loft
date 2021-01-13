@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="build/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="build/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="build/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="build/img/favicon/apple-touch-icon-114x114.png">
+  <title>Контакты</title>
+</head>
+<body>
+   @@include('_header.html')  
+<main>
+   <div class="contacts-page">
+      <div class="wrapper">
+         <nav class="breadcrums">
+            <ul class="breadcrums__list">
+               <li><a href="" class="breadcrums__link">Главная</a></li>
+               <li><a href="" class="breadcrums__link">Контакты</a></li>
+            </ul>
+         </nav>
+         <div class="payment-title">
+            <h1>Контакты</h1>
+         </div>
+         <div class="contacts-container">
+            <div class="contacts-info">
+               <div class="contact-info info">
+                  <div class="info__item info__item_contact info__icon-address">
+                     <div class="info__address info__address_footer">Москва, ул. Название улицы 10</div>
+                  </div>            
+                  <div class="info__item info__item_contact info__icon-phone">
+                     <a href="tel:89650333222" class="info__phone">8 (965) 0 333 222</a>
+                     <a href="" class="info__link">заказать звонок</a>
+                  </div>
+                  <div class="info__item info__item_contact info__icon-email">
+                     <div class="info__email">rbs92@yandex.ru</div>
+                     <a href="email:rbs92@yandex.ru" class="info__link">написать нам</a>
+                  </div>            
+                  <div class="info__item info__item_contact info__icon-schelude">
+                     <div class="info__schelude">Пн-Сб: с 10:00 до 22:00</div>
+                     <span class="info__schelude_off" >Вс: выходной</span>
+                  </div>
+                  <div class="info__item info__social">
+                     <a href="" class="social_item">
+                        <img src="img/icon/vk.png" alt="vk">
+                     </a>
+                     <a href="" class="social_item">
+                        <img src="img/icon/fb.png" alt="fb">
+                     </a>
+                     <a href="" class="social_item">
+                        <img src="img/icon/ins.png" alt="ins">
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="contacts-maps">
+               <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad9d4a5ae6c12e59bf616af54051f95f4a6688472a3784ebb9f6e342010971fd1&amp;width=100%25&amp;height=330&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+         </div>
+         <div class="contact-title">
+            <h2>Напишите нам</h2>
+         </div>
+         <form action="#" id="contact-form">
+            <div class="contact-name">
+               <input type="text" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="contact-email">
+               <input type="text" name="email" placeholder="Ваш e-mail">
+            </div>
+            <div class="contact-phone">
+               <input type="text" name="phone" placeholder="Ваш телефон">
+            </div>
+            <textarea class="contact-text" rows="6" placeholder="Сообщение"></textarea>
+            <button type="submit" class='button'>Отправить</button>
+         </form>
+          <div class="brands">
+            <div class="brands-items">               
+                  <div class="brands-item">
+                     <img src="img/page/br1.png" alt="photo">
+                  </div>
+                  <div class="brands-item">
+                     <img src="img/page/br2.png" alt="photo">
+                 </div>
+                  <div class="brands-item">
+                     <img src="img/page/br3.png" alt="photo">
+                  </div>
+                 <div class="brands-item">
+                     <img src="img/page/br4.png" alt="photo">
+                  </div>
+                  <div class="brands-item">
+                     <img src="img/page/br5.png" alt="photo">
+                  </div>
+                  <div class="brands-item">
+                     <img src="img/page/br6.png" alt="photo">
+                  </div>
+                  <div class="brands-item">
+                     <img src="img/page/br7.png" alt="photo">
+                  </div>
+                  <div class="brands-item">
+                     <img src="img/page/br1.png" alt="photo">
+                  </div>
+                  <div class="brands-item">
+                     <img src="img/page/br2.png" alt="photo">
+                 </div>
+                  <div class="brands-item">
+                     <img src="img/page/br3.png" alt="photo">
+                  </div>
+                 <div class="brands-item">
+                     <img src="img/page/br4.png" alt="photo">
+                  </div>
+                  <div class="brands-item">
+                     <img src="img/page/br5.png" alt="photo">
+                  </div>
+                  <div class="brands-item">
+                     <img src="img/page/br6.png" alt="photo">
+                  </div>
+                  <div class="brands-item">
+                     <img src="img/page/br7.png" alt="photo">
+                  </div>         
+            </div> 
+         </div>            
+      </div>
+   </div>
+</main>
+   @@include('_footer.html')
+<script src="js/script.min.js"></script>
+</body>
+</html>

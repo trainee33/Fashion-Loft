@@ -1,0 +1,255 @@
+.header {
+	&__top {
+		height: 135px;
+	}
+}
+.top-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	border-bottom: 1px solid #d8d6d6;
+	z-index: 3;
+	@include xs-block {
+		justify-content: space-around;
+	}
+	// .top-header__logo
+	&__logo {
+		display: flex;
+		flex: 0 1 80px;
+		@include lg-block {
+			display: none;
+		}
+	}
+	&__logo2 {
+		display: none;
+		@include lg-block {
+			display: block;
+		}
+	}
+	// .top-header__info
+	&__info {
+		display: flex;
+		flex: auto;
+		align-items: center;
+		padding-left: 50px;
+		@include lg-block {
+			justify-content: flex-end;
+			padding: 0;
+		}
+	}
+	&__search {
+		display: flex;
+		align-items: center;
+		flex: auto;
+		justify-content: flex-end;
+		@include lg-block {
+			flex: 0 0 100%;
+		}
+		@include xs-block {
+			padding-top: 20px;
+		}
+	}
+	// .top-header__search
+	&__form {
+		display: flex;
+		align-items: center;
+		color: #f6f6f6;
+		width: 330px;
+		position: relative;
+		@include lg-block {
+			width: 100%;
+		}
+		input {
+			width: 100%;
+			height: 35px;
+			border: 0;
+			padding-left: 15px;
+			outline: none;
+			background-color: #f6f6f6;
+		}
+		button {
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			border: 0;
+			background: url('../img/icon/search.png') no-repeat;
+			width: 15px;
+			height: 15px;
+			cursor: pointer;
+		}
+	}
+	// .top-header__cart
+	&__cart {
+		display: flex;
+		margin-right: 8px;
+		padding-left: 40px;
+		span {
+			width: 30px;
+			height: 30px;
+		}
+		@include xs-block {
+			padding: 0;
+		}
+	}
+}
+.info {
+	@include xs-block {
+		justify-content: center;
+	}
+	// .info__icon-address
+	&__icon-address {
+		background: url('../img/icon/address.png') top left no-repeat;
+		@include sm-block {
+			display: none;
+		}
+	}
+	// .info__link
+	&__link {
+		font-size: 12px;
+		color: #f44141;
+		text-decoration: underline;
+		padding-left: 30px;
+		@include lg-block {
+		}
+	}
+	// .info__icon-phone
+	&__icon-phone {
+		background: url('../img/icon/phone.png') top left no-repeat;
+		@include lg-block {
+		}
+	}
+	// .info__phone
+	&__phone {
+		display: block;
+		color: #000;
+		padding-left: 30px;
+	}
+	// .info__address
+	&__address {
+		font-size: 14px;
+		padding-left: 30px;
+		margin-right: 50px;
+		@include md-block {
+			margin-right: 30px;
+		}
+	}
+}
+.like {
+	background: url('../img/icon/like.png') 0 0 no-repeat;
+	cursor: pointer;
+	@include xs-block {
+		display: none;
+	}
+}
+.cart {
+	background: url('../img/icon/cart.png') 0 0 no-repeat;
+	position: relative;
+	cursor: pointer;
+	margin-left: 30px;
+	@include xs-block {
+		margin-left: 15px;
+	}
+	&:before {
+		position: absolute;
+		content: '0';
+		width: 15px;
+		height: 18px;
+		top: -10px;
+		right: -8px;
+		background-color: #f44141;
+		border-radius: 50%;
+		color: #fff;
+		padding: 3px 0 0 7px;
+		font-size: 12px;
+	}
+}
+.menu-header {
+	display: flex;
+	position: relative;
+	// .header-menu__burger
+	&__burger {
+		display: none;
+		flex: 0 0 30px;
+		width: 36px;
+		background-color: #fff;
+		position: relative;
+		cursor: pointer;
+		z-index: 5;
+		padding: 10px 6px;
+		margin-left: 20px;
+		span {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			transition: all 0.3s;
+			&:first-child {
+				top: 0;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0;
+			}
+		}
+		&.active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: 8px;
+					background-color: #000;
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: 8px;
+					background-color: #000;
+				}
+			}
+		}
+		@include lg-block {
+			display: block;
+		}
+	}
+	// .header-menu__lines
+	&__lines {
+		position: relative;
+		height: 18px;
+	}
+	// .header-menu__body
+	&__body {
+		width: 100%;
+		padding: 15px 0;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+		background-color: #fff;
+		border-bottom: 1px solid #d8d6d6;
+		@include lg-block {
+			display: none;
+		}
+	}
+	// .header-menu__list
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		@include md-block {
+			display: block;
+			padding-top: 30px;
+			text-align: center;
+			li {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	// .header-menu__link
+	&__link {
+		color: #000;
+		font-size: 14px;
+		@include md-block {
+			font-size: 18px;
+		}
+	}
+}
